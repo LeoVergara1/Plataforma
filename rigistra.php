@@ -12,7 +12,9 @@ if(!$rquery){
     echo "$insert";
 }
 else{
-    echo 'registrado';
+    echo '<script language="javascript">alert("Usuario Registrado");</script>'; 
+    
 }
 mysqli_close($conectar);
+
 ?>

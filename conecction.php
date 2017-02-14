@@ -6,5 +6,6 @@ $bd = mysqli_select_db($conectar, "u248870289_didac");
     }
 else{
     echo 'Conecta';
+    
 }
 ?>
