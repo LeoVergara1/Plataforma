@@ -28,8 +28,7 @@
                 </div>
                 <div class="panel-body">
                     <form id="signupForm1" method="post" class="form-horizontal" action="">
-    
-                        </div>
+
 
                         <div class="form-group">
                             <label class="col-sm-4 control-label" for="email1">Email</label>
@@ -43,7 +42,6 @@
                             <div class="col-sm-5">
                                 <input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa tu Contraseña" />
                             </div>
-                        </div>
                         </div>
 
                         <div class="form-group">
@@ -66,9 +64,20 @@
 
             $("#signupForm1").validate({
                 rules: {
+                    firstname1: "required",
+                    lastname1: "required",
+                    username1: {
+                        required: true,
+                        minlength: 2
+                    },
                     password1: {
                         required: true,
                         minlength: 5
+                    },
+                    confirm_password1: {
+                        required: true,
+                        minlength: 5,
+                        equalTo: "#password1"
                     },
                     email1: {
                         required: true,
@@ -77,12 +86,11 @@
                     agree1: "required"
                 },
                 messages: {
-                    
+  
                     password1: {
                         required: "Please provide a password",
                         minlength: "Your password must be at least 5 characters long"
                     },
-                   
                     email1: "Please enter a valid email address"
                 
                 },
@@ -101,14 +109,6 @@
                         error.insertAfter(element);
                     }
 
-                    $("#firstname1").bind('keyup blur', function() {
-                        var node = $(this);//PREGUNTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR NO DESCOMPONER!!!!
-                        node.val(node.val().replace(/[^a-z]/g, ''));
-                    });
-                    $("#lastname1").bind('keyup blur', function() {
-                        var node = $(this);//PREGUNTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAR NO DESCOMPONER!!!!
-                        node.val(node.val().replace(/[^a-z]/g, ''));
-                    });
 
 
                     // Add the span element, if doesn't exists, and apply the icon classes to it.
