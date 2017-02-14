@@ -1,4 +1,4 @@
 <?php
-$conectar = mysql_connect("mysql.hostinger.es","u248870289_didac","didac12")
+$conectar = mysql_connect("mysql.hostinger.mx","u248870289_didac","didac12")
 
 ?>
