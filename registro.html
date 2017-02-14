@@ -27,7 +27,7 @@
                     <h3 class="panel-title">Registro</h3>
                 </div>
                 <div class="panel-body">
-                    <form id="signupForm1" method="post" class="form-horizontal" action="">
+                    <form id="signupForm1" method="post" class="form-horizontal" action="conecction.php">
                         <div class="form-group">
                             <label class="col-sm-4 control-label" for="firstname1">Nombre</label>
                             <div class="col-sm-5">
@@ -93,7 +93,7 @@
     <script type="text/javascript">
         $.validator.setDefaults({
             submitHandler: function() {
-                alert("submitted!");
+                window.location.href ="connection.php";
             }
         });
         $(document).ready(function() {
