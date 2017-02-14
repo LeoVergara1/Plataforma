@@ -9,10 +9,10 @@ $insert = "INSERT INTO usuarios(name,firstname,secondname,email,password) values
     
     $rquery = mysqli_query($conectar, $insert);
 if(!$rquery){
-    echo 'Error registro'
+    echo "$insert";
 }
 else{
-    echo 'registrado'
+    echo 'registrado';
 }
 mysqli_close($conectar);
 ?>
