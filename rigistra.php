@@ -12,7 +12,10 @@ if(!$rquery){
     echo "$insert";
 }
 else{
-    echo '<script language="javascript">alert("Usuario Registrado");</script>'; 
+            echo '<script type="text/javascript">'; 
+            echo 'alert("Usuario registrado, Inicia Sesión con tus datos");'; 
+            echo 'window.location.href = "login.html";';
+            echo '</script>'; 
     
 }
 mysqli_close($conectar);

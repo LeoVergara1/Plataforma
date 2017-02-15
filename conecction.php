@@ -5,7 +5,7 @@ $bd = mysqli_select_db($conectar, "u248870289_didac");
         echo 'No Conecta';
     }
 else{
-    echo 'Conecta';
+    echo 'Cargando';
     
 }
 ?>
